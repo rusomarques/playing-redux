@@ -1,6 +1,6 @@
 import React from 'react';
 import Playing from './features/playing/Playing';
-import ChildrenSelector from './features/playing/ChildrenSelector';
+import NestedSelector from './features/playing/NestedSelector';
 import ActionBar from './features/ActionBar';
 import './App.css';
 
@@ -9,8 +9,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <ActionBar />
+        <p style={{ fontSize: '12px' }}>
+          Mirar consola: al clickear Increnemtar C, hay render del componente NestedSelector? xd
+        </p>
         <Playing />
-        <ChildrenSelector />
+        <NestedSelector />
       </header>
     </div>
   );

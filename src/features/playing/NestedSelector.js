@@ -9,7 +9,7 @@ const styles = type => ({
 });
 
 const timesRendered = {
-  childrenSelector: 0
+  nestedSelector: 0
 };
 
 const ShowCount = ({ value, type }) => (
@@ -18,21 +18,21 @@ const ShowCount = ({ value, type }) => (
   </div>
 );
 
-const ChildrenSelector = () => {
+const NestedSelector = () => {
   const { counterA, counterB } = useSelector(selectNested);
 
   React.useEffect(() => {
-    timesRendered.childrenSelector++;
-    console.log('CHILLDREN SELECTOR:', timesRendered.childrenSelector);
+    timesRendered.nestedSelector++;
+    console.log('NESTED SELECTOR:', timesRendered.nestedSelector);
   });
 
   return (
     <div style={styles()}>
-      <p>Children selector</p>
+      <p>Nested selector</p>
       <ShowCount value={counterA} type="A" />
       <ShowCount value={counterB} type="A" />
     </div>
   );
 };
 
-export default ChildrenSelector;
+export default NestedSelector;
